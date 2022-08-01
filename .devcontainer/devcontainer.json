@@ -1,0 +1,24 @@
+{
+    "name": "HubSpot",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 16, 14, 12.
+		// Append -bullseye or -buster to pin to an OS version.
+		// Use -bullseye variants on local arm64/Apple Silicon.
+		"args": { "VARIANT": "16-bullseye" }
+	},
+	"settings": {
+		"editor.rulers": [80, 120]
+	  },
+
+	  "extensions": [
+		"mhutchie.git-graph", // Git Graph used for viewing and working with git history
+		"shardulm94.trailing-spaces", // see trailing spaces in all file types
+
+		// --- END Devops Extensions ---
+	  ],
+
+    //"postCreateCommand": "yarn install",
+
+	"remoteUser": "node"
+}
